@@ -46,7 +46,7 @@ namespace DS4WinWPF
             string[] profiles = Directory.GetFiles(DS4Windows.Global.appdatapath + @"\Profiles\");
             foreach (string s in profiles)
             {
-                if (s.EndsWith(".xml"))
+                if (s.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
                 {
                     ProfileEntity item = new ProfileEntity()
                     {
