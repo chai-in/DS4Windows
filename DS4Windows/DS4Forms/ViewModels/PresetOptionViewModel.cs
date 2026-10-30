@@ -76,6 +76,7 @@ namespace DS4WinWPF.DS4Forms.ViewModels
         {
             presetList = new List<PresetOption>();
             presetList.Add(new GamepadPreset());
+            presetList.Add(new WiredDualShock4Preset());
             presetList.Add(new GamepadGyroCamera());
             presetList.Add(new MixedPreset());
             presetList.Add(new MixedGyroMousePreset());

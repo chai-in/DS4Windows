@@ -89,6 +89,23 @@ namespace DS4WinWPF.DS4Control
         }
     }
 
+    public class WiredDualShock4Preset : PresetOption
+    {
+        public WiredDualShock4Preset()
+        {
+            name = Translations.Strings.WiredDualShock4PresetName;
+            description = Translations.Strings.WiredDualShock4PresetDescription;
+            outputControllerChoice = false;
+            outputCont = OutputContChoice.DualShock4;
+        }
+
+        public override void ApplyPreset(int idx)
+        {
+            DS4Windows.Global.LoadBlankDS4Profile(idx, false, App.rootHub, false,
+                nativePassthrough: true);
+        }
+    }
+
     public class GamepadGyroCamera : PresetOption
     {
         public GamepadGyroCamera()

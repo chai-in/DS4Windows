@@ -1664,6 +1664,18 @@ namespace DS4WinWPF.Translations {
                 return ResourceManager.GetString("GamepadPresetName", resourceCulture);
             }
         }
+
+        public static string WiredDualShock4PresetName {
+            get {
+                return ResourceManager.GetString("WiredDualShock4PresetName", resourceCulture);
+            }
+        }
+
+        public static string WiredDualShock4PresetDescription {
+            get {
+                return ResourceManager.GetString("WiredDualShock4PresetDescription", resourceCulture);
+            }
+        }
         
         /// <summary>
         ///   Looks up a localized string similar to Gamepad Test.

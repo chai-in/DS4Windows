@@ -3573,9 +3573,10 @@ namespace DS4Windows
         }
 
         public static void LoadBlankDS4Profile(int device, bool launchprogram, ControlService control,
-            bool xinputChange = true, bool postLoad = true)
+            bool xinputChange = true, bool postLoad = true, bool nativePassthrough = false)
         {
-            m_Config.LoadBlankDS4Profile(device, launchprogram, control, "", xinputChange, postLoad);
+            m_Config.LoadBlankDS4Profile(device, launchprogram, control, "", xinputChange, postLoad,
+                nativePassthrough);
             m_Config.EstablishDefaultSpecialActions(device);
             m_Config.CacheExtraProfileInfo(device);
 
@@ -11356,7 +11357,8 @@ namespace DS4Windows
         }
 
         public void LoadBlankDS4Profile(int device, bool launchprogram, ControlService control,
-            string propath = "", bool xinputChange = true, bool postLoad = true)
+            string propath = "", bool xinputChange = true, bool postLoad = true,
+            bool nativePassthrough = false)
         {
             PrepareBlankingProfile(device, control, out bool xinputPlug, out bool xinputStatus, xinputChange);
 
@@ -11377,6 +11379,13 @@ namespace DS4Windows
             r2Info.deadZone = (byte)(0.00 * 255);
 
             outputDevType[device] = OutContType.ViiperDS4;
+
+            if (nativePassthrough)
+            {
+                touchOutMode[device] = TouchpadOutMode.Passthru;
+                touchClickPassthru[device] = true;
+                gyroOutMode[device] = GyroOutMode.Passthru;
+            }
 
             // If a device exists, make sure to transfer relevant profile device
             // options to device instance

@@ -391,6 +391,12 @@ Example: whyme_DS4Windows</value>
   <data name="GamepadPresetName" xml:space="preserve">
     <value>Gamepad</value>
   </data>
+  <data name="WiredDualShock4PresetName" xml:space="preserve">
+    <value>Wired DualShock 4</value>
+  </data>
+  <data name="WiredDualShock4PresetDescription" xml:space="preserve">
+    <value>Emulates a USB DualShock 4 with touchpad, touchpad clicks and motion passed through to compatible games. No touchpad mouse emulation or added stick/trigger dead zones. Disable Steam Input for that game.</value>
+  </data>
   <data name="KBMGyroMouseDescription" xml:space="preserve">
     <value>Maps the controller output to virtual KB+M controls. Useful for playing FPS games with no gamepad support. Gyro is mapped to a virtual Mouse.</value>
   </data>
