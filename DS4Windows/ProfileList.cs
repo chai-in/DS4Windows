@@ -60,6 +60,12 @@ namespace DS4WinWPF
 
         public void AddProfileSort(string profilename)
         {
+            if (profileListCol.Any(entry => string.Equals(entry.Name,
+                profilename, StringComparison.OrdinalIgnoreCase)))
+            {
+                return;
+            }
+
             int idx = 0;
             bool inserted = false;
             foreach (ProfileEntity entry in profileListCol)
