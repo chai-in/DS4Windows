@@ -587,7 +587,7 @@
                 </local:OutputSlotManagerControl>
             </TabItem>
             <TabItem x:Name="settingsTab" Header="{lex:Loc Settings}" Tag="&#xE713;" IsEnabled="{Binding ViewEnabled,Mode=OneWay}">
-                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="{DynamicResource SurfaceBackgroundColor}">
+                <local:PrecisionScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Background="{DynamicResource SurfaceBackgroundColor}">
                     <StackPanel Margin="0,0,14,8" MaxWidth="900" HorizontalAlignment="Left">
                         <StackPanel.Resources>
                             <Thickness x:Key="spaceMargin" Left="4" Right="0" Bottom="8" Top="0" />
@@ -1040,7 +1040,7 @@
                             </Border>
                         </Expander>
                     </StackPanel>
-                </ScrollViewer>
+                </local:PrecisionScrollViewer>
 
             </TabItem>
             <TabItem x:Name="logTab" Header="{lex:Loc Log}" Tag="&#xE9D9;">
