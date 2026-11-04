@@ -68,6 +68,14 @@ see. **Auto Profiles** can select profiles when a matching game or application
 is active. Restart a game after changing emulation if it does not detect the
 new controller.
 
+For a Bluetooth DualShock 4 that should appear to games as a wired PlayStation
+controller, create a profile from the **Wired DualShock 4** preset. It selects
+DualShock 4 output and passes the touchpad, touchpad click and motion through to
+the game, without converting the touchpad into a mouse or adding stick/trigger
+dead zones. The game must support the features you want to use. Disable Steam
+Input for that game if it replaces the emulated PlayStation controller. This
+preset uses the bundled VIIPER backend and leaves existing profiles unchanged.
+
 For native DualSense advanced haptics, select **DualSense** output and enable
 controller audio/speaker support. The game must support advanced haptics.
 Disable overlapping Steam Input remapping for that game so it can see the
